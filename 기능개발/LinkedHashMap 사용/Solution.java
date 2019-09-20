@@ -4,6 +4,7 @@ import java.util.Set;
 
 class Solution {
 	public int[] solution(int[] progresses, int[] speeds) {
+		// HashMap은 순서가 섞일 수 있
 		LinkedHashMap<Integer, Integer> map = new LinkedHashMap<>();
 		int[] days = new int[progresses.length];
 		int size = 0;
