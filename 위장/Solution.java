@@ -10,6 +10,10 @@ class Solution {
 
         int answer = 1;
 
+        // Iterator<Integer> it = map.values().iterator();
+        // while(it.hasNext())
+        // answer *= (it.next.intvalue()+1);
+        
         Set<String> key = map.keySet();
         Iterator<String> it = key.iterator();
         while (it.hasNext())
