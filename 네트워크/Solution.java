@@ -1,5 +1,6 @@
 import java.util.*;
 
+// 앞으론 이렇게 복잡하게 
 class Solution {
 	static ArrayList<Integer>[] adj;
 	static boolean[] visited;
