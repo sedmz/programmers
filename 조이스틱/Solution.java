@@ -1,4 +1,5 @@
 // char형 배열 -> string : String.copyValueOf(arr)
+// ABABAAAAAAABA 
 
 class Solution {
 	public int solution(String name) {
