@@ -1,10 +1,8 @@
-// 프로그래머스-다른 사람의 풀이 중 제일 인상 깊은 코드 응용
-
 import java.util.Stack;
 
 class Solution {
 	public String solution(int n, int t, int m, int p) {
-		Stack<Character> stack = new Stack<>();
+		Stack<Integer> stack = new Stack<>();
 		char numerialSystem[] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
 		int limit = m * t, number = 0, numberCopied = number;
 
@@ -14,9 +12,9 @@ class Solution {
 				sequence += numerialSystem[numberCopied];
 				numberCopied = ++number;
 				while (!stack.isEmpty())
-					sequence += stack.pop();
+					sequence += numerialSystem[stack.pop()];
 			} else {
-				stack.push(numerialSystem[numberCopied % n]);
+				stack.push(numberCopied % n);
 				numberCopied /= n;
 			}
 		}
