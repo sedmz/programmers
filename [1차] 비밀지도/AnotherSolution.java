@@ -1,5 +1,3 @@
-package programmers;
-
 class Solution {
 	public String makeSharp(int n, int m) {
 		if (n == 0) {
