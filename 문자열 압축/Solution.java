@@ -33,6 +33,9 @@ public class Solution {
 	public int solution(String s) {
 		int minLength = s.length();
 		for (int i = 1; i < s.length(); i++) {
+			if (minLength <= i)
+				break;
+			
 			int length = convert(s, i);
 			if (length < minLength)
 				minLength = length;
