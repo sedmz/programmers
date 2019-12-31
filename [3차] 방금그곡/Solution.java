@@ -1,11 +1,11 @@
 class Solution {
 
 	public String convert(String string) {
-		string = string.replace("C#", "1");
-		string = string.replace("D#", "2");
-		string = string.replace("F#", "3");
-		string = string.replace("G#", "4");
-		string = string.replace("A#", "5");
+		string = string.replace("C#", "c");
+		string = string.replace("D#", "d");
+		string = string.replace("F#", "f");
+		string = string.replace("G#", "g");
+		string = string.replace("A#", "a");
 		return string;
 	}
 
