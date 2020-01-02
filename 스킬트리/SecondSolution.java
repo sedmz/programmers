@@ -1,4 +1,4 @@
-class MySolution {
+class SecondSolution {
 	public boolean isRightSkillTree(String skill, String skill_tree) {
 		int beforeCharIndex, charIndex = -1;
 		for (int i = 0; i < skill.length(); i++) {
@@ -25,7 +25,7 @@ class MySolution {
 	}
 
 	public static void main(String[] args) {
-		MySolution sol = new MySolution();
+		SecondSolution sol = new SecondSolution();
 		String skill = "CBD";
 		String[] skill_trees = { "cAEBC", "CBADF", "AECB", "BDA" };
 		sol.solution(skill, skill_trees);
