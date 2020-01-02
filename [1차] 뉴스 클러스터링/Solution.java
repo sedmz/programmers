@@ -30,9 +30,9 @@ class Solution {
 	}
 
 	public int calculate() {
-		if (difference1.size() == 0)
-			if (difference2.size() == 0)
-				if (intersection.size() == 0)
+		if (difference1.isEmpty())
+			if (difference2.isEmpty())
+				if (intersection.isEmpty())
 					return 1 * 65536;
 
 		int interSize = intersection.size();
