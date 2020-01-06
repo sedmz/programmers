@@ -1,3 +1,5 @@
+// Integer.bitCount(int n)을 사용해도 편리함
+
 class Solution {
 	public int countOne(int n) {
 		int cnt = 0;
