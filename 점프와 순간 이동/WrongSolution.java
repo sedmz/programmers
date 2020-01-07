@@ -1,17 +1,18 @@
 import java.util.*;
 
 public class Solution {
-	public int[] battery = new int[100000001];
-
+	ArrayList<Integer> battery = new ArrayList<>();
+	
 	public int solution(int n) {
+		battery.add(0);
 		for (int i = 1; i <= n; i++) {
 			int a = n, b = n;
-			a = battery[i - 1] + 1;
+			a = battery.get(i - 1) + 1;
 			if (i % 2 == 0)
-				b = battery[i / 2];
-			battery[i] = Math.min(a, b);
+				b = battery.get(i / 2);
+			battery.add(a > b ? b : a);
 		}
-		return battery[n];
+		return battery.get(n);
 	}
 
 	public static void main(String[] args) {
