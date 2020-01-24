@@ -53,5 +53,4 @@ class Solution {
 		// sol.solution(3, 3, new int[][] { { 1, 2 }, { 2, 2 } });
 		// sol.solution(2, 4, new int[][] { { 2, 1 }, { 2, 2 }, { 2, 3 }, { 1, 4 } });
 	}
-
 }
