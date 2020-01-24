@@ -11,4 +11,8 @@ class Solution {
 			queue.add(queue.poll() + queue.peek());
 		return queue.poll()+queue.poll();
 	}
+	public static void main(String[] args) {
+		Solution sol = new Solution();
+		System.out.println(sol.solution(80));
+	}
 }
