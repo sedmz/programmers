@@ -62,6 +62,6 @@ class Solution {
 		String target = "cog";
 		String words[] = { "hot", "dot", "dog", "lot", "log", "cog" };
 		// String words[] = { "hot", "dot", "dog", "lot", "log" };
-		System.out.println(sol.solution(begin, target, words));
+		System.out.println(sol.solution(begin, target, words)); 
 	}
 }
