@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 class Solution {
 	public long getFactorial(int n) {
@@ -9,27 +10,21 @@ class Solution {
 	}
 
 	public int[] solution(int n, long k) {
-		ArrayList<Integer> answer = new ArrayList<>();
+		int[] answer = new int[n];
 		ArrayList<Integer> number = new ArrayList<>();
 		for (int i = 0; i <= n; i++)
 			number.add(i);
 
+		int i = 0;
 		long m = getFactorial(n);
 		while (number.size() > 1) {
 			m /= n--;
 			int idx = (int) ((k - 1) / m) + 1;
-			answer.add(number.get(idx));
+			answer[i++] = number.get(idx);
 			number.remove(idx);
 			k = (k - 1) % m + 1;
 		}
-		return toArray(answer);
-	}
-
-	public int[] toArray(ArrayList<Integer> list) {
-		int[] array = new int[list.size()];
-		for (int i = 0; i < array.length; i++)
-			array[i] = list.get(i);
-		return array;
+		return answer;
 	}
 
 	public static void main(String[] args) {
