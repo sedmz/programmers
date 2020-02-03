@@ -4,21 +4,30 @@ import java.util.Queue;
 import java.util.Stack;
 
 class Solution {
-	public boolean isContinue(Stack<Integer> list, boolean[] visit) {
-		for (int i = 0; i < list.size(); i++) {
-			if (visit[list.get(i)] == true)
-				return false;
+	Queue<Stack<Integer>> queue = new LinkedList<>();
+	Queue<Stack<Integer>> candidateKeys = new LinkedList<>();
+
+	public boolean isSkip(Stack<Integer> stack) {
+		for (Stack<Integer> key : candidateKeys) {
+			int cnt = 0;
+			for (int k : key) {
+				if (stack.contains(k))
+					cnt++;
+			}
+			if (cnt == key.size()) {
+				return true;
+			}
 		}
-		return true;
+		return false;
 	}
 
-	public boolean isUnique(Stack<Integer> list, String[][] relation) {
+	public boolean isUnique(Stack<Integer> stack, String[][] relation) {
 		HashSet<String> set = new HashSet<String>();
 
 		for (int j = 0; j < relation.length; j++) {
 			String str = "";
-			for (int i = 0; i < list.size(); i++) {
-				str += relation[j][list.get(i)] + " ";
+			for (int i = 0; i < stack.size(); i++) {
+				str += relation[j][stack.get(i)] + " ";
 			}
 			set.add(str);
 		}
@@ -26,59 +35,33 @@ class Solution {
 	}
 
 	public int solution(String[][] relation) {
-		Queue<Stack<Integer>> queue = new LinkedList<>();
-		boolean[] visited = new boolean[relation[0].length];
-		boolean[] unvisitable = new boolean[relation[0].length];
-		int answer = 0, size = 0;
+		int answer = 0;
 
-		for (int idx = 0; idx < relation[0].length; idx++)
-			queue.add(addStack(new Stack<Integer>(), idx));
+		for (int i = 0; i < relation[0].length; i++)
+			queue.add(addStack(new Stack<Integer>(), i));
 
 		while (!queue.isEmpty()) {
-			// System.out.println(queue);
-			Stack<Integer> list = queue.poll();
+			Stack<Integer> stack = queue.poll();
 
-			if (list.size() > size) {
-				unvisitable = copyArray(visited);
-				size = list.size();
-			}
-
-			if (!isContinue(list, unvisitable)) {
-				// System.out.println("continue");
+			if (isSkip(stack))
 				continue;
-			}
 
-			if (isUnique(list, relation)) {
-				for (int i = 0; i < list.size(); i++)
-					visited[list.get(i)] = true;
-				System.out.println("통과한 list" + " " + list);
+			if (isUnique(stack, relation)) {
+				candidateKeys.add(stack);
 				answer++;
 			} else {
-				for (int i = list.peek() + 1; i < visited.length; i++) {
-					if (visited[i] == false) {
-						queue.add(addStack(list, i));
-					}
+				for (int i = stack.peek() + 1; i < relation[0].length; i++) {
+					queue.add(addStack(stack, i));
 				}
 			}
 		}
 		return answer;
 	}
 
-	public Stack<Integer> addStack(Stack<Integer> list, int i) {
-		Stack<Integer> newArray = new Stack<>();
-		for (int idx = 0; idx < list.size(); idx++) {
-			newArray.add(list.get(idx));
-		}
-		newArray.add(i);
-		return newArray;
-	}
-
-	public boolean[] copyArray(boolean[] visit) {
-		boolean[] newArray = new boolean[visit.length];
-		for (int idx = 0; idx < visit.length; idx++) {
-			newArray[idx] = visit[idx];
-		}
-		return newArray;
+	public Stack<Integer> addStack(Stack<Integer> stack, int val) {
+		Stack<Integer> newStack = (Stack<Integer>) stack.clone();
+		newStack.add(val);
+		return newStack;
 	}
 
 	public static void main(String[] args) {
@@ -86,18 +69,15 @@ class Solution {
 
 //		String[][] relation = { { "100", "ryan", "music", "2" }, { "200", "apeach", "math", "2" },
 //				{ "300", "tube", "computer", "3" }, { "400", "con", "computer", "4" }, { "500", "muzi", "music", "3" },
-//				{ "600", "apeach", "music", "2" } };
+//				{ "600", "apeach", "music", "2" } }; // 2
 
 //		  String[][] relation = { { "100", "music", "2" }, { "200", "math", "2" }, {
 //		  "300", "computer", "3" }, { "400", "computer", "4" }, { "500", "music", "3"
 //		  }, { "600", "music", "2" } }; // 1
 
-		/*
-		 * String[][] relation = { { "200", "ryan", "music", "2" }, { "200", "apeach",
-		 * "math", "2" }, { "300", "tube", "computer", "3" }, { "400", "con",
-		 * "computer", "4" }, { "500", "muzi", "music", "3" }, { "600", "apeach",
-		 * "music", "2" } }; // 3
-		 */
+//		String[][] relation = { { "200", "ryan", "music", "2" }, { "200", "apeach", "math", "2" },
+//				{ "300", "tube", "computer", "3" }, { "400", "con", "computer", "4" }, { "500", "muzi", "music", "3" },
+//				{ "600", "apeach", "music", "2" } }; // 3
 
 //		String[][] relation = { { "a", "b", "c", "d", "e", "f", "g", "1" }, { "a", "b", "c", "d", "e", "f", "g", "2" },
 //				{ "a", "b", "c", "d", "e", "f", "g", "3" }, { "a", "b", "c", "d", "e", "f", "g", "4" },
@@ -108,7 +88,7 @@ class Solution {
 //				{ "a", "b", "c", "d", "e", "f", "g", "13" }, { "a", "b", "c", "d", "e", "f", "g", "14" },
 //				{ "a", "b", "c", "d", "e", "f", "g", "15" }, { "a", "b", "c", "d", "e", "f", "g", "16" },
 //				{ "a", "b", "c", "d", "e", "f", "g", "17" }, { "a", "b", "c", "d", "e", "f", "g", "18" },
-//				{ "a", "b", "c", "d", "e", "f", "g", "19" }, { "a", "b", "c", "d", "e", "f", "g", "20" } }; //1
+//				{ "a", "b", "c", "d", "e", "f", "g", "19" }, { "a", "b", "c", "d", "e", "f", "g", "20" } }; // 1
 
 //		String[][] relation = { { "z", "b", "c", "z", "z", "g", "f", "1" }, { "z", "b", "c", "d", "z", "z", "f", "2" },
 //				{ "a", "b", "c", "d", "e", "f", "g", "3" }, { "b", "b", "c", "d", "e", "f", "g", "4" },
@@ -127,19 +107,19 @@ class Solution {
 //		String[][] relation = { { "1", "1", "1", "1", "1", "1", "1", "0" }, { "1", "1", "1", "1", "1", "1", "0", "1" },
 //				{ "1", "1", "1", "1", "1", "0", "1", "1" }, { "1", "1", "1", "1", "0", "1", "1", "1" },
 //				{ "1", "1", "1", "0", "1", "1", "1", "1" }, { "1", "1", "0", "1", "1", "1", "1", "1" },
-//				{ "1", "0", "1", "1", "1", "1", "1", "1" }, { "0", "1", "1", "1", "1", "1", "1", "1" } };
+//				{ "1", "0", "1", "1", "1", "1", "1", "1" }, { "0", "1", "1", "1", "1", "1", "1", "1" } }; // 8?
 //		String[][] relation = { { "1", "1", "1", "1", "1", "1", "1", "0" }, { "1", "1", "1", "1", "1", "1", "0", "1" },
 //				{ "1", "1", "1", "1", "1", "0", "1", "1" }, { "1", "1", "1", "1", "0", "1", "1", "1" },
 //				{ "1", "1", "1", "0", "1", "1", "1", "1" }, { "1", "1", "0", "1", "1", "1", "1", "1" },
-//				{ "1", "0", "1", "1", "1", "1", "1", "1" } };
+//				{ "1", "0", "1", "1", "1", "1", "1", "1" } }; // 7?
 
-		String[][] relation = { { "1", "1", "1", "1", "1", "1", "1" }, { "2", "2", "2", "2", "2", "0", "0" },
-				{ "3", "3", "3", "3", "3", "2", "2" }, { "4", "4", "4", "4", "3", "3", "3" },
-				{ "5", "5", "5", "4", "4", "4", "4" }, { "6", "6", "5", "5", "5", "5", "5" },
-				{ "7", "6", "6", "6", "6", "6", "6" }, { "7", "7", "7", "7", "7", "7", "7" } };
+//		String[][] relation = { { "1", "1", "1", "1", "1", "1", "1" }, { "2", "2", "2", "2", "2", "0", "0" },
+//				{ "3", "3", "3", "3", "3", "2", "2" }, { "4", "4", "4", "4", "3", "3", "3" },
+//				{ "5", "5", "5", "4", "4", "4", "4" }, { "6", "6", "5", "5", "5", "5", "5" },
+//				{ "7", "6", "6", "6", "6", "6", "6" }, { "7", "7", "7", "7", "7", "7", "7" } }; // 12?
 
-		// String[][] relation = { { "a" } };
-//		String[][] relation = { { "1", "2", "3" }, { "1", "2", "a" }, { "1", "2", "b" } };
+		String[][] relation = { { "a" } }; // 1
+//		String[][] relation = { { "1", "2", "3" }, { "1", "2", "a" }, { "1", "2", "b" } }; // 1
 		System.out.println(sol.solution(relation));
 	}
 }
