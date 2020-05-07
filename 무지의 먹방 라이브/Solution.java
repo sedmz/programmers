@@ -1,65 +1,50 @@
-// 왜 min을 Int형으로 바꾸면 오류가 나는지 모르겠다
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.PriorityQueue;
 
 class Solution {
-	ArrayList<int[]> times = new ArrayList<>();
+	HashMap<Integer, Integer> count = new LinkedHashMap<>();
+	PriorityQueue<Integer> number = new PriorityQueue<>();
 
 	public void init(int[] food_times) {
-		HashMap<Integer, Integer> map = new LinkedHashMap<>();
 		for (int time : food_times)
-			map.put(time, map.getOrDefault(time, 0) + 1);
+			count.put(time, count.getOrDefault(time, 0) + 1);
 
-		for (int time : map.keySet()) {
-			times.add(new int[] { map.get(time), time });
-		}
-	}
-
-	public void sortByValue() {
-		Collections.sort(times, new Comparator() {
-			public int compare(Object o1, Object o2) {
-				int a = ((int[]) o1)[1];
-				int b = ((int[]) o2)[1];
-
-				if (a == b) {
-					a = ((int[]) o1)[0];
-					b = ((int[]) o2)[0];
-				}
-				return ((Comparable) a).compareTo(b);
-			}
-		});
+		number.addAll(count.keySet());
 	}
 
 	public int solution(int[] food_times, long k) {
 		init(food_times);
-		sortByValue();
 
-		long size = food_times.length, min = 0;
-		long firstValue = times.get(0)[1];
+		long size = food_times.length;
+		int beforeMin = 0;
 
-		while ((firstValue - min) * size <= k) {
-			k -= (firstValue - min) * size;
-			size -= times.get(0)[0];
-			min = firstValue;
-			times.remove(0);
-			if (times.isEmpty())
-				return -1;
-			firstValue = times.get(0)[1];
-		}
+		while (!number.isEmpty()) {
+			int min = number.poll();
+			int diff = min - beforeMin;
 
-		k %= size;
-		int cnt = 0, i = 0;
-		while (true) {
-			if (food_times[i++] > min) {
-				if (cnt++ == k)
-					return i;
+			if (k < diff * size) {
+				k %= size;
+				for (int i = 0; i < food_times.length; i++) {
+					if (food_times[i] > beforeMin) {
+						if (k-- == 0)
+							return i + 1;
+					}
+				}
 			}
+			k -= diff * size;
+			size -= count.get(min);
+			beforeMin = min;
 		}
+		return -1;
+	}
+
+	public static void main(String[] args) {
+		Solution sol = new Solution();
+		int[] food_times = { 3, 1, 2, 1 };
+		long k = 7;
+		int answer = sol.solution(food_times, k);
+		System.out.println("answer = " + answer);
 	}
 }
 
