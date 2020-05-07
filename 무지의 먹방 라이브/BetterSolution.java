@@ -1,36 +1,27 @@
-// 다른 사람의 풀이보고 개선, Better인지는 모르겠음
+// 다른 사람의 풀이 보고 개선
 
 import java.util.ArrayList;
 
 class Solution {
-	public class Food {
-		int idx, value;
-
-		public Food(int idx, int value) {
-			this.idx = idx;
-			this.value = value;
-		}
-	}
+	ArrayList<int[]> foods = new ArrayList<>();
 
 	public int solution(int[] food_times, long k) {
-		ArrayList<Food> foods = new ArrayList<>();
 		for (int i = 0; i < food_times.length; i++)
-			foods.add(new Food(i + 1, food_times[i]));
+			foods.add(new int[] { i + 1, food_times[i] });
 
 		while (!foods.isEmpty()) {
 			long n = k / foods.size();
 			k %= foods.size();
 
 			for (int i = 0; i < foods.size(); i++) {
-				foods.get(i).value -= n;
-				if (foods.get(i).value < 0)
-					k -= foods.get(i).value;
+				foods.get(i)[1] -= n;
+				if (foods.get(i)[1] < 0)
+					k -= foods.get(i)[1];
 			}
-			foods.removeIf(food -> food.value <= 0);
+			foods.removeIf(food -> food[1] <= 0);
 
-			if (k < foods.size()) {
-				return foods.get((int) k).idx;
-			}
+			if (k < foods.size())
+				return foods.get((int) k)[0];
 		}
 		return -1;
 	}
