@@ -1,3 +1,5 @@
+// 왜 min을 Int형으로 바꾸면 오류가 나는지 모르겠다
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
