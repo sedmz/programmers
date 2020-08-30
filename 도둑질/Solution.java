@@ -12,9 +12,7 @@ class Solution {
 				subMax = Math.max(dp[i - 1], subMax);
 			if (i > start + 1)
 				subMax = Math.max(dp[i - 2] + dp[i], subMax);
-			if (i > start + 2)
-				subMax = Math.max(dp[i - 3] + dp[i], subMax);
-
+			
 			dp[i] = subMax;
 			max = Math.max(dp[i], max);
 		}
