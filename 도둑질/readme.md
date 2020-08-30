@@ -2,7 +2,7 @@
 
 # Solution.java
 * dp
-* 총 두 번의 dp : 첫 값 제외한 dp, 마지막 값 제외한 dp (첫 집과 마지막 집을 동시에 도둑질할 수 없으므로)
+* 총 두 번의 dp : 첫 값 제외한 dp, 마지막 값 제외한 dp (첫 배열과 마지막 배열도 인접해있기 때문에)
 
 # OtherSolution.java
 * 다른 사람의 풀이를 참고하여 리팩토링한 Solution.java
