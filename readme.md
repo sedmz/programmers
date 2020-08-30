@@ -1,9 +1,11 @@
 # 파일명 규칙
-* Solution.java : 내가 푼 정답 코드
-* OtherSolution.java : 다른 사람의 풀이를 참고하여 Solution을 개선한 코드
-* HeavySolution.java : 내가 푼 시간 초과 코드
-* AnotherSolution.java : 내가 푼 또다른 정답 코드, 앞으론 Solution2라고 할 것
 
-# 잘 풀었다고 생각하는 문제
-1. 하이
+|파일명|푼 사람|정답여부|설명|
+|--|------|---|--|
+|Solution|나|O|내가 푼 정답|
+|HeavySolution|나|X|내가 푼 시간초과로 인한 오답|
+|WrongSolution|나|X|내가 푼 그냥 오답|
+|OtherSolution|남|O|다른 사람의 풀이를 바탕으로 리팩토링된 내 Solution.java|
 
+# 대표 문제
+*
