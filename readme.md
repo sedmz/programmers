@@ -2,8 +2,8 @@
 
 |파일명|푼 사람|정답여부|설명|
 |--|------|---|--|
-|MySolution|나|O|내가 푼 정답|
-|ReferenceSolution|남|O|다른 사람의 풀이를 바탕으로 **리팩토링**된 내 Solution|
+|**MySolution**|나|O|내가 푼 정답|
+|**ReferenceSolution**|남|O|다른 사람의 풀이를 바탕으로 **리팩토링**된 내 Solution|
 |HeavySolution|나|X|내가 푼 시간초과로 인한 오답|
 |WrongSolution|나|X|내가 푼 그냥 오답|
 
