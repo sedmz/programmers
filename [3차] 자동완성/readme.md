@@ -3,3 +3,5 @@
 
 # MySolution.java
 * 인접한 단어들을 비교하는 방식
+* HashSet으로도 풀 수 있을 듯
+* 해설에 나온 Trie 방식으로도 풀어보기
