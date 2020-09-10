@@ -23,6 +23,7 @@
 * 자물쇠와 열쇠
 
 # 시간
+* [[1차] 추석 트래픽][https://github.com/sedmz/programmers/tree/master/%5B1차%5D%20추석%20트래픽]
 * (link:https://github.com/sedmz/programmers/tree/master/%5B1차%5D%20추석%20트래픽)[[1차] 추석 트래픽] ⭐️⭐️⭐️
 
 # 그 외
