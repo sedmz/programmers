@@ -24,6 +24,7 @@
 
 # 시간
 * (추석 트래픽) [https://github.com/sedmz/programmers/tree/master/%5B1차%5D%20추석%20트래픽] ⭐️⭐️⭐️
+[[Thread와 Queue]](https://blog.naver.com/jdub7138/220936452048)
 
 # 그 외
 * [3차] 자동완성
