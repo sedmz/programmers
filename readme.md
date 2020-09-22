@@ -23,6 +23,7 @@
 * 기둥과 보 설치
 * 자물쇠와 열쇠
 * [두 개 뽑아서 더하기](https://github.com/sedmz/programmers/blob/master/두%20개%20뽑아서%20더하기/MySolution.java)
+* [삼각 달팽이](https://github.com/sedmz/programmers/tree/master/삼각%20달팽이)
 
 # 시간
 * [[1차] 추석 트래픽](https://github.com/sedmz/programmers/tree/master/%5B1차%5D%20추석%20트래픽) ⭐️
