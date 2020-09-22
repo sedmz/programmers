@@ -11,7 +11,7 @@ class Solution {
 				set.add(numbers[i] + numbers[j]);
 			}
 		}
-
+		// return set.stream().sorted().mapToInt(Integer::intValue).toArray();
 		return Arrays.stream(set.toArray(new Integer[0])).mapToInt(Integer::intValue).sorted().toArray();
 	}
 }
