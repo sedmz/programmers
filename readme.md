@@ -26,7 +26,7 @@
 * [삼각 달팽이](https://github.com/sedmz/programmers/tree/master/삼각%20달팽이)
 
 # 투포인터
-* [[카카오 인턴][보석 쇼핑]](https://github.com/sedmz/programmers/tree/master/%5B카카오%20인턴%5D%20보석%20쇼핑)
+* [[카카오 인턴]보석 쇼핑](https://github.com/sedmz/programmers/tree/master/%5B카카오%20인턴%5D%20보석%20쇼핑)
 
 # 시간
 * [[1차] 추석 트래픽](https://github.com/sedmz/programmers/tree/master/%5B1차%5D%20추석%20트래픽) ⭐️
