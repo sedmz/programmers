@@ -30,3 +30,4 @@
 
 # 그 외
 * [3차] 자동완성
+* [점프와 순간이동](https://github.com/sedmz/programmers/tree/master/점프와%20순간%20이동)
