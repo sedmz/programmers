@@ -6,4 +6,4 @@
 # MySolution.java
 * PriorityQueue 사용
 * 현재 sec보다 빨리 들어온 job들을 priorityQueue에 담는다
-* 그 중 작업 시간이 가장 짧은 애 먼저 처리하는 방식
+* 그 중 작업 시간이 가장 짧은 job 먼저 처리하는 방식
