@@ -28,6 +28,9 @@
 # 투포인터
 * [[카카오 인턴] 보석 쇼핑](https://github.com/sedmz/programmers/tree/master/%5B카카오%20인턴%5D%20보석%20쇼핑)
 
+# Heap
+* [디스크 컨트롤러](https://github.com/sedmz/programmers/tree/master/디스크%20컨트롤러)
+
 # 시간
 * [[1차] 추석 트래픽](https://github.com/sedmz/programmers/tree/master/%5B1차%5D%20추석%20트래픽) ⭐️
 
