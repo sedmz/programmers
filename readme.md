@@ -7,6 +7,7 @@
 |HeavySolution|나|X|시간초과 오답|
 |WrongSolution|나|X|그냥 오답|
 
+⭐️은 내 만족도
 
 # DP
 * [도둑질](https://github.com/sedmz/programmers/tree/master/도둑질)
