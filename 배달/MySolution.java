@@ -12,10 +12,10 @@ class Solution {
 			distance[r[0] - 1][r[1] - 1] = Math.min(r[2], distance[r[0] - 1][r[1] - 1]);
 			distance[r[1] - 1][r[0] - 1] = Math.min(r[2], distance[r[1] - 1][r[0] - 1]);
 		}
-
-    for (int k = 0; k < distance.length; k++) {
-      for (int i = 0; i < distance.length; i++) {
-        for (int j = 0; j < distance.length; j++) {
+		
+		for (int k = 0; k < distance.length; k++) {
+			for (int i = 0; i < distance.length; i++) {
+				for (int j = 0; j < distance.length; j++) {
 					distance[i][j] = Math.min(distance[i][j], distance[i][k] + distance[k][j]);
 				}
 			}
