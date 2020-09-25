@@ -11,7 +11,7 @@
 # DP
 * [도둑질](https://github.com/sedmz/programmers/tree/master/도둑질)
 * 스티커 모으기 (2)
-* [순위](https://github.com/sedmz/programmers/tree/master/순위) ⭐️
+* [순위](https://github.com/sedmz/programmers/tree/master/순위) ⭐️⭐️⭐️
 
 # DFS
 * 올바른 괄호의 갯수
@@ -32,8 +32,9 @@
 * [디스크 컨트롤러](https://github.com/sedmz/programmers/tree/master/디스크%20컨트롤러)
 
 # 시간
-* [[1차] 추석 트래픽](https://github.com/sedmz/programmers/tree/master/%5B1차%5D%20추석%20트래픽) ⭐️
+* [[1차] 추석 트래픽](https://github.com/sedmz/programmers/tree/master/%5B1차%5D%20추석%20트래픽) ⭐️⭐️
 
 # 그 외
 * [3차] 자동완성
 * [점프와 순간이동](https://github.com/sedmz/programmers/tree/master/점프와%20순간%20이동)
+* [최고의 집합](https://github.com/sedmz/programmers/tree/master/최고의%20집합) ⭐️
