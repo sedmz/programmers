@@ -13,12 +13,12 @@
 * [도둑질](https://github.com/sedmz/programmers/tree/master/도둑질)
 * 스티커 모으기 (2)
 * [순위](https://github.com/sedmz/programmers/tree/master/순위) ⭐️⭐️⭐️
-* [배달](https://github.com/sedmz/programmers/blob/master/배달/MySolution.java)
+* [배달](https://github.com/sedmz/programmers/blob/master/배달)
 * [풍선 터트리기](https://github.com/sedmz/programmers/tree/master/풍선%20터트리기) ⭐️
 
 # DFS/BFS
 * 올바른 괄호의 갯수
-* [경주로 건설](https://github.com/sedmz/programmers/blob/master/경주로%20건설/readme.md) ⭐️⭐️
+* [경주로 건설](https://github.com/sedmz/programmers/tree/master/경주로%20건설) ⭐️⭐️
 
 # 이분탐색
 * 예산 (3)
@@ -26,7 +26,7 @@
 # Brute force
 * 기둥과 보 설치
 * 자물쇠와 열쇠
-* [두 개 뽑아서 더하기](https://github.com/sedmz/programmers/blob/master/두%20개%20뽑아서%20더하기/MySolution.java)
+* [두 개 뽑아서 더하기](https://github.com/sedmz/programmers/blob/master/두%20개%20뽑아서%20더하기)
 * [삼각 달팽이](https://github.com/sedmz/programmers/tree/master/삼각%20달팽이)
 
 # 투포인터
