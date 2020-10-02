@@ -21,7 +21,8 @@
 * [경주로 건설](https://github.com/sedmz/programmers/tree/master/경주로%20건설) ⭐️⭐️
 
 # 이분탐색
-* 예산 (3)
+* [예산 (3)]()
+* [입국심사](https://github.com/sedmz/programmers/tree/master/입국심사)
 
 # Brute force
 * 기둥과 보 설치
