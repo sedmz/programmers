@@ -40,11 +40,13 @@
 # 시간
 * [[1차] 추석 트래픽](https://github.com/sedmz/programmers/tree/master/%5B1차%5D%20추석%20트래픽) ⭐️⭐️
 
+# 배열
+* [행렬 테두리 회전하기](https://github.com/sedmz/programmers/tree/master/행렬%20테두리%20회전하기)
+
 # 그 외
 * [3차] 자동완성
 * [점프와 순간이동](https://github.com/sedmz/programmers/tree/master/점프와%20순간%20이동)
 * [최고의 집합](https://github.com/sedmz/programmers/tree/master/최고의%20집합) ⭐️
 * [기지국 설치](https://github.com/sedmz/programmers/tree/master/기지국%20설치) ⭐️⭐️
 * [2개 이하로 다른 비트](https://github.com/sedmz/programmers/blob/master/2개%20이하로%20다른%20비트) ⭐️
-
 * [점프와 순간이동](https://github.com/sedmz/programmers/tree/master/점프와%20순간%20이동)
