@@ -45,3 +45,6 @@
 * [점프와 순간이동](https://github.com/sedmz/programmers/tree/master/점프와%20순간%20이동)
 * [최고의 집합](https://github.com/sedmz/programmers/tree/master/최고의%20집합) ⭐️
 * [기지국 설치](https://github.com/sedmz/programmers/tree/master/기지국%20설치) ⭐️⭐️
+* [2개 이하로 다른 비트](https://github.com/sedmz/programmers/blob/master/2개%20이하로%20다른%20비트) ⭐️
+
+* [점프와 순간이동](https://github.com/sedmz/programmers/tree/master/점프와%20순간%20이동)
