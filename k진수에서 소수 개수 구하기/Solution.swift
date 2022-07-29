@@ -1,7 +1,7 @@
 import Foundation
 
 func solution(_ n:Int, _ k:Int) -> Int {
-    let numbers: [String] = String(n, radix: k).components(separatedBy: "0")
+    let numbers = String(n, radix: k).components(separatedBy: "0")
     return numbers.filter { isPrime(Int($0)) }.count
 }
 
